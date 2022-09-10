@@ -1,12 +1,16 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
-import Conversion from './conversion';
+import Conversion from './Conversion';
+import Weather from './Weather';
+import useWeather from '../Hooks/useWeather'
+
 
 const App = () => {
-  const [inputF, setInputF] = React.useState('');
-  const [inputC, setInputC] = React.useState('');
-  const [holderF, setHolderF] = React.useState('320');
-  const [holderC, setHolderC] = React.useState('160');
+  const [inputF, setInputF] = useState('');
+  const [inputC, setInputC] = useState('');
+  const [holderF, setHolderF] = useState('320');
+  const [holderC, setHolderC] = useState('160');
+  const {weather} = useWeather();
 
   const atChange = (e) => {
     if (e.target.id === 'inputF') {
@@ -23,7 +27,7 @@ const App = () => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     let converC = ((inputF - 32) * 5) / 9;
     if (converC % 1 !== 0) {
       converC = converC.toFixed(4);
@@ -31,7 +35,7 @@ const App = () => {
     setHolderC(converC);
   }, [inputF]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let converF = (inputC * 9) / 5 + 32;
     if (converF % 1 !== 0) {
       converF = converF.toFixed(4);
@@ -41,6 +45,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="container">
       <Conversion
         inputF={inputF}
         inputC={inputC}
@@ -49,6 +54,8 @@ const App = () => {
         onChange={atChange}
         onClick={(e) => atClick(e)}
       />
+      <Weather weather={weather} />
+      </div>
     </div>
   );
 };

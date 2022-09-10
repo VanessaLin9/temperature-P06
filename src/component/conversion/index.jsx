@@ -15,7 +15,7 @@ const Conversion: React.FC<ConversionProps> = (props) => {
 
   return (
     <section>
-      <div className="container">
+      
         {/* <form> */}
         <label className="inputLabel">
           <input
@@ -44,7 +44,7 @@ const Conversion: React.FC<ConversionProps> = (props) => {
           &deg;C
         </label>
         {/* </form> */}
-      </div>
+      
     </section>
   );
 };
