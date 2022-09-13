@@ -7,7 +7,7 @@ const LOCATION_CITY = '臺北市'
 const useWeather = () => {
 
  const [weather, setWeather] = useState({
-   locationName: "苗栗縣",
+   locationName: "台南縣",
    windSpeed: 1.1,
    temperature: 22.9,
    observationTime: '2020-12-12 22:10:00',
@@ -51,11 +51,12 @@ const useWeather = () => {
         }
         return needElements
       }, {})
-       
+      const weatherCode = weatherElements.Wx.parameterValue
+      console.log('weatherCode', weatherCode)
       setWeather((prev)=> ({
         ...prev,
         description: weatherElements.Wx.parameterName,
-        weatherCode: weatherElements.Wx.parameterValue,
+        // weatherCode: weatherElements.Wx.parameterValue,
         rainPossibility: weatherElements.PoP.parameterName,
         comfortability: weatherElements.CI.parameterName,
       }))

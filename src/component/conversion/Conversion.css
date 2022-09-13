@@ -1,4 +1,10 @@
-
+.converter-title {
+ margin:0;
+ padding: 10px;
+ border-radius: 15px 15px 0 0;
+ color:#fff;
+ background-color: #003;
+}
 
 .inputLabel {
   margin:15px;
@@ -18,7 +24,6 @@
   outline: 0;
   padding-left: 2px;
   min-width: 10rem;
-  
   border: none;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;

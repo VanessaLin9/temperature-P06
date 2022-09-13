@@ -6,6 +6,10 @@
 - 使用 gh-pages 套件包將專案發布到 github pages上
 - 歡迎試用本專案: https://vanessalin9.github.io/temperature-P06/
 ---
+#### 刻意練習
+- 包裝 customHooks
+- (使用fetch與axios)打api
+---
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
