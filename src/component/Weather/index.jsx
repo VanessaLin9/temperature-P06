@@ -1,8 +1,8 @@
-import './Weather.css'
+import '../../css/Weather.css'
 
 const Weather = (props)=> {
   const {weather} = props;
-
+  // console.log(weather.weatherCode)
   return (
     <div className="weather-box">
       <h4 className="weather-title">{weather.locationName} <i className="fas fa-map-marker-alt" /></h4>
@@ -12,7 +12,7 @@ const Weather = (props)=> {
           <p>{weather.description}</p>
         </div>
         <div className="weather-pic">
-          <img src="http://openweathermap.org/img/wn/09d@2x.png" alt="" />
+          <img src={`http://openweathermap.org/img/wn/${weather.weatherCode}@2x.png`} alt="" />
         </div>
       </div>
       <div className="weather-sub">

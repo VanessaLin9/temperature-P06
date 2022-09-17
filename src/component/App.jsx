@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import '../css/App.css';
 import Conversion from './Conversion';
 import Weather from './Weather';
 import OpenWeather from './OpenWeather';

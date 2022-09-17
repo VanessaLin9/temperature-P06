@@ -17,11 +17,11 @@ const useOpenWeather = () => {
    comfortability:'456',
  })
   
- const getCoordinateByName = ()=> {
-  axios.get('http://api.openweathermap.org/geo/1.0/direct?q=buffalo&limit=5&appid=cd667218865e54b8e2f7fe6241e481be')
-  .then(({data})=> console.log(data))
-  .catch((err)=> console.log(err))
- }
+//  const getCoordinateByName = ()=> {
+//   axios.get('http://api.openweathermap.org/geo/1.0/direct?q=buffalo&limit=5&appid=cd667218865e54b8e2f7fe6241e481be')
+//   .then(({data})=> console.log(data))
+//   .catch((err)=> console.log(err))
+//  }
 
  const fetchOpenWeather = () => {
   axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPENTOKEN}&units=metric&lang=zh_tw`)
