@@ -1,6 +1,3 @@
-// import React, { useEffect } from 'react';
-import './Conversion.css';
-
 type ConversionProps = {
   inputF: number,
   inputC: number,

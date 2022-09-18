@@ -1,5 +1,3 @@
-import '../../css/Weather.css'
-
 const Weather = (props)=> {
   const {weather} = props;
   // console.log(weather.weatherCode)

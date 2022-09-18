@@ -1,0 +1,122 @@
+@use 'conversion';
+@use 'weather';
+@mixin flexCenter($direction) {
+  display:flex;
+  flex-direction: $direction;
+  align-items: center;
+}
+
+/* reset css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn,
+button,
+button:focus,
+input:focus,
+textarea:focus,
+select,
+select:focus,
+a:focus {
+  outline: 0px !important;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+button[disabled] {
+  pointer-events: none;
+}
+
+input {
+  padding: 0;
+}
+
+input:required {
+  box-shadow: none;
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/******** reset css ***********/
+
+.App {
+  text-align: center;
+  @include flexCenter(column)
+}
+
+.weather-container {
+  padding: 15px;
+}
+
+.conversion-container {
+  width: 80%;
+  background-color: rgb(211, 96, 213);
+  margin: 30px auto 0 auto;
+  height: auto;
+  border-radius: 15px;
+}
+@media screen and (min-width: 600px){
+  .weather-container{
+    @include flexCenter(row)
+  }
+  .conversion-container{
+    width: 50%;
+  }
+}

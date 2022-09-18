@@ -12,7 +12,7 @@ const useWeather = () => {
    temperature: 22.9,
    observationTime: '2020-12-12 22:10:00',
    description: "多雲時晴",
-   weatherCode: "123",
+   weatherCode: "1",
    rainPossibility: 48.3,
    comfortability:'456',
  })

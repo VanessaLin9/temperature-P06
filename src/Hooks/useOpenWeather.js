@@ -12,7 +12,7 @@ const useOpenWeather = () => {
    temperature: 22.9,
    observationTime: '2020-12-12 22:10:00',
    description: "多雲時晴",
-   weatherIcon: "123",
+   weatherIcon: "10d",
    rainPossibility: 48.3,
    comfortability:'456',
  })

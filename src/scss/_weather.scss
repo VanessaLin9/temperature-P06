@@ -1,0 +1,51 @@
+$transblack:rgba(0, 0, 0, 0.2);
+$fasColor: rgb(49, 51, 98);
+
+.weather-box {
+ background: linear-gradient(20deg, rgb(135, 213, 189), rgb(238, 223, 201));
+ min-width: 200px;
+ height: 300px;
+ padding: 20px;
+ margin: 25px ;
+ box-sizing: border-box;
+ border-radius: 15px;
+ .weather-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    background: $transblack;
+    padding: 5px;
+    .fa-map-marker-alt {
+        font-size: large;
+        color: rgba(255, 0, 0, 0.4);
+      }
+  };
+ .weather-main {
+   display: flex;
+   align-items: center;
+   h2 {font-size: 2.5rem;};
+  .weather-pic {
+    width: 150px;
+    height: 150px;
+    img { width: 100%;}
+    };
+ };
+ .weather-sub {
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+  .fas {
+    color: $fasColor;
+    margin-right:1rem;
+  }
+ }
+}
+
+@media screen and (min-width: 600px){
+  .weather-box{
+    .weather-title{
+      font-size: 1rem;
+    };
+  }
+}
+
