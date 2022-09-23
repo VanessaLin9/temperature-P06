@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import moment from 'moment'
 
 const OPENTOKEN = process.env.REACT_APP_OPEN_Token
 const latitude = '43.0408'
@@ -23,16 +24,18 @@ const useOpenWeather = () => {
 //   .catch((err)=> console.log(err))
 //  }
 
+// TODO time
  const fetchOpenWeather = () => {
   axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPENTOKEN}&units=metric&lang=zh_tw`)
     .then(({data}) => {
-      
+      const time = data.dt
+      const timeFormate =moment().utc(time).format('YYYY-MM-DD HH:mm:ss')
       setOpenWeather((prev)=>({
         ...prev,
         locationName: data.name,
         windSpeed: data.wind.speed,
         temperature: data.main.temp,
-        observationTime: data.dt,
+        observationTime: timeFormate,
         description: data.weather[0].description,
         weatherIcon: data.weather[0].icon,
       }))

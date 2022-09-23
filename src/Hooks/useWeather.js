@@ -28,7 +28,9 @@ const useWeather = () => {
         }
         return needElements
       }, {})
-      
+      // const observationTimeString = location.time.obsTime.split(' ')
+      // const dateString = observationTimeString[0]
+      // const timeString = observationTimeString[1]
       setWeather((prev) => ({
         ...prev,
         locationName: location.locationName, 
@@ -52,9 +54,10 @@ const useWeather = () => {
         return needElements
       }, {})
       const weatherCode = (weatherElements.Wx.parameterValue)/1
-
+      
       const findFitPic = (code: number)=> {
-        const picCode = ['13d', '01d', '02d', '02d','03d', '04d', '04d', '03d','09d', '10d', '11d']
+        if(code> 11){ return '10d' }
+        const picCode = ['13d', '01d', '02d', '02d','03d', '04d', '04d', '03d','09d', '10d', '11d', '10d']
         return picCode[code]
       }
 
