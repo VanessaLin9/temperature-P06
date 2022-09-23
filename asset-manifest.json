@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/temperature-P06/static/css/main.c64c6f97.css",
-    "main.js": "/temperature-P06/static/js/main.d2326dba.js",
+    "main.css": "/temperature-P06/static/css/main.e2a84750.css",
+    "main.js": "/temperature-P06/static/js/main.95acc75c.js",
     "static/js/787.942e61b1.chunk.js": "/temperature-P06/static/js/787.942e61b1.chunk.js",
     "index.html": "/temperature-P06/index.html",
-    "main.c64c6f97.css.map": "/temperature-P06/static/css/main.c64c6f97.css.map",
-    "main.d2326dba.js.map": "/temperature-P06/static/js/main.d2326dba.js.map",
+    "main.e2a84750.css.map": "/temperature-P06/static/css/main.e2a84750.css.map",
+    "main.95acc75c.js.map": "/temperature-P06/static/js/main.95acc75c.js.map",
     "787.942e61b1.chunk.js.map": "/temperature-P06/static/js/787.942e61b1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c64c6f97.css",
-    "static/js/main.d2326dba.js"
+    "static/css/main.e2a84750.css",
+    "static/js/main.95acc75c.js"
   ]
 }
