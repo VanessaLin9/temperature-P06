@@ -3,7 +3,7 @@ $fasColor: rgb(49, 51, 98);
 
 .weather-box {
  background: linear-gradient(20deg, rgb(135, 213, 189), rgb(238, 223, 201));
- min-width: 200px;
+ min-width: 300px;
  height: 300px;
  padding: 20px;
  margin: 25px ;
@@ -23,7 +23,13 @@ $fasColor: rgb(49, 51, 98);
  .weather-main {
    display: flex;
    align-items: center;
-   h2 {font-size: 2rem;};
+   justify-content: center;
+   h2 {
+    font-size: 2rem;
+    span {
+      font-size: 1.3rem;
+    }
+  };
   .weather-pic {
     width: 150px;
     height: 150px;

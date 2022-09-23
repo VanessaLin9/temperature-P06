@@ -6,7 +6,7 @@ const Weather = (props)=> {
       <h4 className="weather-title">{weather.locationName} <i className="fas fa-map-marker-alt" /></h4>
       <div className="weather-main">
         <div className="weather-temperature">
-          <h2>{ Math.round(weather.temperature)} &deg;C </h2>
+          <h2>{ Math.round(weather.temperature)}<span>&deg;C</span></h2>
           <p>{weather.description}</p>
         </div>
         <div className="weather-pic">

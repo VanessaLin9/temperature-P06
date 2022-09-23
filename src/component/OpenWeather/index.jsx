@@ -8,7 +8,7 @@ const OpenWeather = (props) => {
       <h4 className="weather-title">{openweather.locationName} <i className="fas fa-map-marker-alt" /></h4>
       <div className="weather-main">
         <div className="weather-temperature">
-          <h2>{ Math.round(openweather.temperature)} &deg;C </h2>
+          <h2>{ Math.round(openweather.temperature)}<span>&deg;C</span></h2>
           <p>{openweather.description}</p>
         </div>
         <div className="weather-pic">
