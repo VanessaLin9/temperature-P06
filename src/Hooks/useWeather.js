@@ -56,7 +56,7 @@ const useWeather = () => {
       const weatherCode = (weatherElements.Wx.parameterValue)/1
       
       const findFitPic = (code: number)=> {
-        if(code> 11){ code = 11 }
+        if(code> 11){ return '10d' }
         const picCode = ['13d', '01d', '02d', '02d','03d', '04d', '04d', '03d','09d', '10d', '11d', '10d']
         return picCode[code]
       }
