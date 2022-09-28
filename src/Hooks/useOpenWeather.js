@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import moment from 'moment'
+import momentTZ from 'moment-timezone'
 
 const OPENTOKEN = process.env.REACT_APP_OPEN_Token
 const latitude = '43.0408'
@@ -28,8 +28,9 @@ const useOpenWeather = () => {
  const fetchOpenWeather = () => {
   axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPENTOKEN}&units=metric&lang=zh_tw`)
     .then(({data}) => {
-      const time = data.dt
-      const timeFormate =moment().utc(time).format('YYYY-MM-DD HH:mm:ss')
+      const date = new Date().getTime()
+      const timezone = "America/New_York"
+      const timeFormate = momentTZ(date).tz(timezone).format('YYYY-MM-DD HH:mm:ss')
       setOpenWeather((prev)=>({
         ...prev,
         locationName: data.name,

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import momentTZ from 'moment-timezone'
 
 const TOKEN = process.env.REACT_APP_Token
 const LOCATION = '臺北'
@@ -22,6 +23,9 @@ const useWeather = () => {
     .then((res) => res.json())
     .then((Data) => {
       const location = Data.records.location[0]
+      const date = new Date().getTime()
+      const timezone = "Asia/Taipei"
+      const timeFormate = momentTZ(date).tz(timezone).format('YYYY-MM-DD HH:mm:ss')
       const weatherElements = location.weatherElement.reduce((needElements, item) => {
         if(['WDSD', 'TEMP'].includes(item.elementName)){
           needElements[item.elementName] = item.elementValue
@@ -36,7 +40,7 @@ const useWeather = () => {
         locationName: location.locationName, 
         windSpeed: weatherElements.WDSD,
         temperature: weatherElements.TEMP,
-        observationTime: location.time.obsTime
+        observationTime: timeFormate
       }))
     })
   }

@@ -16,11 +16,11 @@ const Conversion: React.FC<ConversionProps> = (props) => {
         <h4>Temperature Converter</h4>
       </div>
         {/* <form> */}
-        <label className="inputLabel">
+        <label className="converter-label">
           <input
             id="inputF"
             type="number"
-            className="my-input"
+            className="converter-input"
             placeholder={holderF}
             value={inputF}
             onChange={onChange}
@@ -29,11 +29,11 @@ const Conversion: React.FC<ConversionProps> = (props) => {
           />
           &deg;F
         </label>
-        <label className="inputLabel">
+        <label className="converter-label">
           <input
             id="inputC"
             type="number"
-            className="my-input"
+            className="converter-input"
             placeholder={holderC}
             value={inputC}
             onChange={onChange}
