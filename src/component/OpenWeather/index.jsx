@@ -5,8 +5,17 @@ const OpenWeather = (props) => {
 
   return (
     <div className="weather-box">
-      <h4 className="weather-title">{openweather.locationName} <i className="fas fa-map-marker-alt" /></h4>
-      <div className="weather-main">
+
+      <div className="weather-box_title-box">
+        <h4 className="weather-box_title-box--title">{openweather.locationName}</h4>
+        <label htmlFor="input-toggle_openWeather" className="weather-box_title-box--check">
+          <i className="fas fa-map-marker-alt" />
+        </label>
+        <input className="weather-box_title-box--check-box" type="checkbox"  id="input-toggle_openWeather"/>
+        <input type="text"  placeholder="City" className="weather-box_title-box--input"/>
+      </div>
+      
+      <div className="weather">
         <div className="weather-temperature">
           <h2>{ Math.round(openweather.temperature)}<span>&deg;C</span></h2>
           <p>{openweather.description}</p>

@@ -27,7 +27,7 @@ const Conversion: React.FC<ConversionProps> = (props) => {
             onClick={onClick}
             // disabled={disableF}
           />
-          &deg;F
+          <span>&deg;F</span>
         </label>
         <label className="converter-label">
           <input
