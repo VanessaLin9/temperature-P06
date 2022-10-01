@@ -1,0 +1,65 @@
+[
+  {
+  "city": "New York",
+  "growth_from_2000_to_2013": "4.8%",
+  "latitude": 40.7127837,
+  "longitude": -74.0059413,
+  "population": "8405837",
+  "rank": "1",
+  "state": "New York"
+  },
+  {
+  "city": "Los Angeles",
+  "growth_from_2000_to_2013": "4.8%",
+  "latitude": 34.0522342,
+  "longitude": -118.2436849,
+  "population": "3884307",
+  "rank": "2",
+  "state": "California"
+  },
+  {
+  "city": "Chicago",
+  "growth_from_2000_to_2013": "-6.1%",
+  "latitude": 41.8781136,
+  "longitude": -87.6297982,
+  "population": "2718782",
+  "rank": "3",
+  "state": "Illinois"
+  },
+  {
+  "city": "Houston",
+  "growth_from_2000_to_2013": "11.0%",
+  "latitude": 29.7604267,
+  "longitude": -95.3698028,
+  "population": "2195914",
+  "rank": "4",
+  "state": "Texas"
+  },
+  {
+    "city": "Buffalo",
+    "growth_from_2000_to_2013": "-11.3%",
+    "latitude": 42.88644679999999,
+    "longitude": -78.8783689,
+    "population": "258959",
+    "rank": "73",
+    "state": "New York"
+  },
+  {
+    "city": "Rochester",
+    "growth_from_2000_to_2013": "-4.1%",
+    "latitude": 43.16103,
+    "longitude": -77.6109219,
+    "population": "210358",
+    "rank": "103",
+    "state": "New York"
+  },
+  {
+    "city": "North Tonawanda",
+    "growth_from_2000_to_2013": "-11.3%",
+    "latitude": 43.0408,
+    "longitude": -78.7812,
+    "population": "258959",
+    "rank": "73",
+    "state": "New York"
+  }
+]

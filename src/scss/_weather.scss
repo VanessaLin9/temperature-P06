@@ -23,8 +23,8 @@ $fasColor: rgb(49, 51, 98);
     };
   &--check {
     position:absolute;
-    top: 5px;
-    right: 15px;
+    top: 8px;
+    right: 10px;
     .fa-map-marker-alt{
       font-size: x-large;
       color: rgba(255, 0, 0, 0.4);
@@ -37,10 +37,20 @@ $fasColor: rgb(49, 51, 98);
   &--input {
     position: absolute;
     margin-right: 10px;
+    line-height: 25px;
+    padding: 3px;
     border-radius: 5px;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform .3s ease-out;
+  };
+  &--select {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 220px;
+    background: #fff;
+    cursor: pointer;
   }
 };
 

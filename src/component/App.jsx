@@ -12,7 +12,7 @@ const App = () => {
   const [holderF, setHolderF] = useState('320');
   const [holderC, setHolderC] = useState('160');
   const {weather} = useWeather();
-  const {openWeather} = useOpenWeather();
+  // const {openWeather} = useOpenWeather();
 
   const atChange = (e) => {
     if (e.target.id === 'inputF') {
@@ -49,7 +49,7 @@ const App = () => {
     <div className="App">
       <div className="weather-container">
        <Weather weather={weather} />
-       <OpenWeather openweather={openWeather} />
+       <OpenWeather />
       </div>
       
       <Conversion
