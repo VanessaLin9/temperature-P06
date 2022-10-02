@@ -21,7 +21,7 @@ const OpenWeather = () => {
         </label>
         <input className="weather-box_title-box--check-box" type="checkbox"  id="input-toggle_openWeather"/>
 
-        <form >
+        {/* <form > */}
           <input type="text" valur={city} 
           onChange={(e) => setCity(e.target.value)} 
           placeholder="City" className="weather-box_title-box--input"/>
@@ -30,7 +30,7 @@ const OpenWeather = () => {
                 <li value={position.city}>{position.city}</li>
             ))}
           </ul>}
-        </form>
+        {/* </form> */}
 
       </div>
       

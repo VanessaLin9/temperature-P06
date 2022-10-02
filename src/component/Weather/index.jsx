@@ -1,10 +1,18 @@
-const Weather = (props)=> {
-  const {weather} = props;
-  // console.log(weather.weatherCode)
+import useSWR from 'swr';
+import {fetchWeather} from '../../services/api'
+
+const Weather = ()=> {
+  const { data, error } = useSWR('taipei', fetchWeather)
+  // const {weather} = props;
+
+  if(error) return <div>failed to loading</div>;
+  if (!data) return <div>loading.....</div>;
+
   return (
     <div className="weather-box">
+      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
       <div className="weather-box_title-box">
-        <h4 className="weather-box_title-box--title">{weather.locationName}</h4>
+        <h4 className="weather-box_title-box--title">{data.locationName}</h4>
         <label htmlFor="input-toggle" className="weather-box_title-box--check">
           <i className="fas fa-map-marker-alt" />
         </label>
@@ -14,17 +22,17 @@ const Weather = (props)=> {
 
       <div className="weather">
         <div className="weather-temperature">
-          <h2>{ Math.round(weather.temperature)}<span>&deg;C</span></h2>
-          <p>{weather.description}</p>
+          <h2>{ Math.round(data.temperature)}<span>&deg;C</span></h2>
+          <p>{data.description}</p>
         </div>
         <div className="weather-pic">
-          <img src={`http://openweathermap.org/img/wn/${weather.weatherCode}@2x.png`} alt="" />
+          <img src={`http://openweathermap.org/img/wn/${data.weatherCode}@2x.png`} alt="" />
         </div>
       </div>
       <div className="weather-sub">
-        <p><i className="fas fa-wind" />  {weather.windSpeed} m/s</p>
-          <p><i className="fas fa-cloud-showers-heavy" />  {weather.rainPossibility} %</p>
-          <p><i className="fas fa-clock" />{weather.observationTime}</p>
+        <p><i className="fas fa-wind" />  {data.windSpeed} m/s</p>
+          <p><i className="fas fa-cloud-showers-heavy" />  {data.rainPossibility} %</p>
+          <p><i className="fas fa-clock" />{data.observationTime}</p>
       </div>
     </div>
   )

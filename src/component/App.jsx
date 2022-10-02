@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import Conversion from './Conversion';
 import Weather from './Weather';
 import OpenWeather from './OpenWeather';
-import useWeather from '../Hooks/useWeather'
-import useOpenWeather from '../Hooks/useOpenWeather'
+
 
 
 const App = () => {
@@ -11,7 +10,7 @@ const App = () => {
   const [inputC, setInputC] = useState('');
   const [holderF, setHolderF] = useState('320');
   const [holderC, setHolderC] = useState('160');
-  const {weather} = useWeather();
+  // const {weather} = useWeather();
   // const {openWeather} = useOpenWeather();
 
   const atChange = (e) => {
@@ -48,7 +47,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="weather-container">
-       <Weather weather={weather} />
+       <Weather />
        <OpenWeather />
       </div>
       
