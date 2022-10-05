@@ -44,8 +44,19 @@ const App = () => {
     setHolderF(converF);
   }, [inputC]);
 
+  const atClickBody = (e) => {
+    const input = document.querySelector('#input-toggle_openWeather')
+    if(input.checked === true) {
+      if(e.target === e.currentTarget){
+        console.log('return')
+      }
+    }
+  }
+
   return (
-    <div className="App">
+    <div 
+      className="App"  
+      onClick={(e) => atClickBody(e)}>
       <div className="weather-container">
        <Weather />
        <OpenWeather />

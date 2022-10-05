@@ -97,7 +97,9 @@ code {
 
 .App {
   text-align: center;
-  @include flexCenter(column)
+  @include flexCenter(column);
+  // border: 1px solid #000;
+  min-height: 100vh;
 }
 
 .weather-container {

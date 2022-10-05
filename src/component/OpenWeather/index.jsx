@@ -6,7 +6,7 @@ import {fetchOpenWeather} from '../../services/api'
 
 const OpenWeather = () => {
   //  const {openWeather} = useOpenWeather();
-   const { data , error } = useSWR('North Tonawanda', fetchOpenWeather)
+  const { data , error } = useSWR('North Tonawanda', fetchOpenWeather)
   const [city, setCity] = useState('')
 
   if (error) return <div>failed to load</div>;
@@ -21,16 +21,18 @@ const OpenWeather = () => {
         </label>
         <input className="weather-box_title-box--check-box" type="checkbox"  id="input-toggle_openWeather"/>
 
-        {/* <form > */}
+        <form className="weather-box_title-box_form">
           <input type="text" valur={city} 
           onChange={(e) => setCity(e.target.value)} 
-          placeholder="City" className="weather-box_title-box--input"/>
-          {city && <ul className="weather-box_title-box--select">
+          placeholder="City" className="weather-box_title-box_form--input"/>
+          {city && <ul className="weather-box_title-box_form--select">
             {cityData.map(position => (
-                <li value={position.city}>{position.city}</li>
+                <li 
+                value={position.city}
+                className="weather-box_title-box_form--select--option">{position.city}</li>
             ))}
           </ul>}
-        {/* </form> */}
+        </form>
 
       </div>
       
